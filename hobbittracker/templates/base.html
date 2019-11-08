@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,10 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <script src="{% static 'dist/index.js' %}"defer></script>
+  <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 <body>
   <div class="header">
-    
+    Let's track some habits
   </div>
   {% block content %}
   

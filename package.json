@@ -8,14 +8,16 @@
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-scripts": "3.2.0",
-    "npm-run-all": "^4.1.5"
+    "npm-run-all": "^4.1.5",
+    "parcel-bundler": "^1.12.4"
   },
   "scripts": {
-    "start": "npm-run-all -p django",
+    "start": "npm-run-all -p django watch",
     "django": "./manage.py runserver",
-    "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "watch": "parcel watch react/src/index.js --out-dir hobbittracker/static/dist/",
+    "build": "parcel build react/src/index.js --out-dir hobbittracker/static/dist/"
   },
   "repository": {
     "type": "git",
@@ -42,6 +44,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {}
+  }
 }
