@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     
     'hobbittracker',
     'react',
+    
+    'bulma',
 ]
 
 MIDDLEWARE = [
@@ -127,6 +129,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 #Other custom settings:
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+
 ACCOUNT_ACTIVATON_DAYS = 7
 
 AUTH_USER_MODEL = 'hobbittracker.User'
