@@ -1,11 +1,21 @@
 {
+  "private": true,
   "name": "habit-tracker-Ry-Dowd",
   "version": "1.0.0",
   "description": "For this project, you will be working in pairs to build a Django application that you can use to help track and reinforce daily habits.",
   "main": "index.js",
+  "dependencies": {
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-scripts": "3.2.0",
+    "npm-run-all": "^4.1.5"
+  },
   "scripts": {
     "start": "npm-run-all -p django",
-    "django": "./manage.py runserver"
+    "django": "./manage.py runserver",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "repository": {
     "type": "git",
@@ -14,11 +24,24 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "homepage": "https://github.com/momentum-cohort-2019-09/habit-tracker-Ry-Dowd#readme",
   "bugs": {
     "url": "https://github.com/momentum-cohort-2019-09/habit-tracker-Ry-Dowd/issues"
   },
-  "homepage": "https://github.com/momentum-cohort-2019-09/habit-tracker-Ry-Dowd#readme",
-  "dependencies": {
-    "npm-run-all": "^4.1.5"
-  }
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {}
 }

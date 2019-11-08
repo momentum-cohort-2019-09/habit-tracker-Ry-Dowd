@@ -17,7 +17,6 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
 from hobbittracker import views
-from frontend import views as v
 
 router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)
@@ -29,5 +28,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('registration.backends.default.urls')),
     path('api/', include(router.urls)),
-    path('', v.index, name='index')
+    path('tracker/', include('react.urls'))
 ]
