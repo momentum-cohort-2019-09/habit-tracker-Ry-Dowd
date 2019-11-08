@@ -4,8 +4,8 @@
   "description": "For this project, you will be working in pairs to build a Django application that you can use to help track and reinforce daily habits.",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --mode development ./project/frontend/src/index.js --output ./project/frontend/static/frontend/main.js",
-    "build": "webpack --mode production ./project/frontend/src/index.js --output ./project/frontend/static/frontend/main.js"
+    "start": "npm-run-all -p django",
+    "django": "./manage.py runserver"
   },
   "repository": {
     "type": "git",
@@ -18,15 +18,7 @@
     "url": "https://github.com/momentum-cohort-2019-09/habit-tracker-Ry-Dowd/issues"
   },
   "homepage": "https://github.com/momentum-cohort-2019-09/habit-tracker-Ry-Dowd#readme",
-  "devDependencies": {
-    "@babel/core": "^7.7.2",
-    "@babel/preset-env": "^7.7.1",
-    "@babel/preset-react": "^7.7.0",
-    "babel-loader": "^8.0.6",
-    "babel-plugin-transform-class-properties": "^6.24.1",
-    "prop-types": "^15.7.2",
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0",
-    "webpack-cli": "^3.3.10"
+  "dependencies": {
+    "npm-run-all": "^4.1.5"
   }
 }

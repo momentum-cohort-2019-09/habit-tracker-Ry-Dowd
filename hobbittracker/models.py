@@ -10,7 +10,7 @@ class User(AbstractUser):
   
 class Habit(models.Model):
   user = models.ForeignKey(to=User, on_delete=models.CASCADE, related_name='habits')
-  observers = models.ManyToManyField(to=User, related_name='observed_habits')
+  observers = models.ManyToManyField(to=User, related_name='observed_habits', blank=True)
   start_date = models.DateField(auto_now_add=True)
   activity = models.CharField(max_length=100)
   goal = models.FloatField()
