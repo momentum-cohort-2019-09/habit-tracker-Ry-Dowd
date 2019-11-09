@@ -19,7 +19,7 @@ class HabitSerializer(serializers.ModelSerializer):
   comments = CommentSerializer(many=True)
   class Meta:
     model = Habit
-    fields = ['user', 'observers', 'start_date', 'activity', 'goal', 'goal_measurement', 'comments', 'logs']
+    fields = ['id', 'user', 'observers', 'start_date', 'activity', 'goal', 'goal_measurement', 'comments', 'logs']
   
   
 class UserSerializer(serializers.ModelSerializer):

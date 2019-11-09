@@ -7,7 +7,7 @@ function App({user}) {
   return (
     <div className="App">
       {user.habits.map((habit, index) =>
-        <Habit habit={habit} />
+        <Habit habit={habit} key={'habit' + index} />
       )}
       
     </div>

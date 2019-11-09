@@ -37,6 +37,6 @@ class Comment(models.Model):
   
   def __str__(self):
     if self.title:
-      return self.title + 'on' + self.habit.user +"'s" + self.habit
+      return self.title + ' on ' + str(self.habit.user) +"'s " + str(self.habit)
     else:
-      return "Untitled Comment on " + self.habit.user+"'s" + self.habit
+      return "Untitled Comment on " + str(self.habit.user)+"'s " + str(self.habit)
