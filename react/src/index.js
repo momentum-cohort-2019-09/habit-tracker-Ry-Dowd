@@ -2,8 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 
-let user = json.parse(document.getElementById('data').textContent)
+const user = JSON.parse(document.getElementById("data").textContent)
+console.log(user)
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App user={user} />, document.getElementById('root'));
 
 

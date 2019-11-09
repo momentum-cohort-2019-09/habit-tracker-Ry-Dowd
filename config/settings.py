@@ -134,3 +134,5 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 ACCOUNT_ACTIVATON_DAYS = 7
 
 AUTH_USER_MODEL = 'hobbittracker.User'
+
+LOGIN_REDIRECT_URL = "/tracker/"
