@@ -29,7 +29,7 @@ class DailyLog(models.Model):
     return self.habit + " " + self.date
 
 class Comment(models.Model):
-  poster = models.ForeignKey(to=User, related_name='comments', on_delete=models.CASCADE)
+  poster = models.ForeignKey(to=User, to_field='username', related_name='comments', on_delete=models.CASCADE)
   habit = models.ForeignKey(to=Habit, related_name='comments', on_delete=models.CASCADE)
   title = models.CharField(max_length=100, blank=True, null=True)
   content = models.TextField(max_length=1000)

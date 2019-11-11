@@ -5,11 +5,12 @@
   "description": "For this project, you will be working in pairs to build a Django application that you can use to help track and reinforce daily habits.",
   "main": "index.js",
   "dependencies": {
+    "chart.js": "^2.9.2",
+    "npm-run-all": "^4.1.5",
+    "parcel-bundler": "^1.12.4",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
-    "react-scripts": "3.2.0",
-    "npm-run-all": "^4.1.5",
-    "parcel-bundler": "^1.12.4"
+    "react-scripts": "3.2.0"
   },
   "scripts": {
     "start": "npm-run-all -p django watch",

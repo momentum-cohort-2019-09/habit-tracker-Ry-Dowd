@@ -11,10 +11,15 @@ const Habit = ({habit}) => {
   } 
   return (
     <div className='habit'>
-      I'm an individual habit! <br />
-      In this case I like {habit.activity}!
-      <div className='button' onClick={showComments}>Comments</div>
-      <div className={className}></div>
+      {habit.activity}
+      <div className="habit-content">
+        My goal is {habit.goal} {habit.goal_measurement} per day.
+        <div className="button-holder">
+          <div className="button">Detailed History</div>
+          <div className='button' onClick={showComments}>Comments</div>
+        </div>
+        <div className={className}></div>
+      </div>
     </div>
   )}
 

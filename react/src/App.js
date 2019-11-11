@@ -5,7 +5,7 @@ import { userInfo } from 'os';
 
 function App({user}) {
   return (
-    <div className="App">
+    <div className="app">
       {user.habits.map((habit, index) =>
         <Habit habit={habit} key={'habit' + index} />
       )}

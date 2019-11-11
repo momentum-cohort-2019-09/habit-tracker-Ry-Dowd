@@ -24,6 +24,15 @@
 {{user.data|json_script:'data'}}
 
   <noscript>You need to enable JavaScript to run this app.</noscript>
-  <div id="root"></div>
-
+  <div class="main columns">
+    <div class="sidebar column is-one-fifth">
+      <div class="">
+        My Habits
+      </div>
+      <div class="">
+        Observed Habits
+      </div>
+    </div>
+    <div class='column' id="root">I GET REPLACED</div>
+  </div>
 {% endblock %}

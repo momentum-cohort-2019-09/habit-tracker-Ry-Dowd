@@ -3,3 +3,29 @@
   padding:0;
   box-sizing: border-box;
 }
+
+.habit {
+  background:lightblue;
+  max-width: 30vw;
+  margin:15px 20px;
+  padding: 1rem 1rem;
+  
+}
+.app {
+  display:flex;
+  flex-wrap:wrap;
+}
+
+.button-holder {
+  display:none;
+}
+
+.habit:hover{
+  transform: scale(1.2);
+  transition: transform .3s;
+  
+}
+
+.habit:hover .button-holder{
+  display:block;
+}
