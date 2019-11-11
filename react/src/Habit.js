@@ -6,7 +6,6 @@ import Details from './Details'
 const Habit = ({habit}) => {
   const endpoint = "/api/habits/"+habit.id
   const className = 'comments'+habit.id
-  props
   
   function showDetails(){
     ReactDOM.render(<Details />, document.querySelector("."+className+"-details"))

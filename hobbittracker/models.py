@@ -14,7 +14,7 @@ class Habit(models.Model):
   start_date = models.DateField(auto_now_add=True)
   activity = models.CharField(max_length=100)
   goal = models.FloatField()
-  goal_measurement = models.CharField(max_length=50)  
+  goal_measurement = models.CharField(max_length=50)
   
   def __str__(self):
     return self.activity
@@ -25,8 +25,11 @@ class DailyLog(models.Model):
   date = models.DateField(default=datetime.date.today)
   description = models.TextField(max_length=1000 ,null=True, blank=True)
   
+  class Meta:
+    ordering = ['-date']
+  
   def __str__(self):
-    return self.habit + " " + self.date
+    return str(self.habit) + " " + self.date.strftime('%m/%d/%y')
 
 class Comment(models.Model):
   poster = models.ForeignKey(to=User, to_field='username', related_name='comments', on_delete=models.CASCADE)
