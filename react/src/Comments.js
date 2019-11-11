@@ -1,6 +1,8 @@
 import React from 'react'
 import Comment from './Comment'
 
+const moment = require('moment')
+
 class Comments extends React.Component {
   constructor(props){
     super(props)
