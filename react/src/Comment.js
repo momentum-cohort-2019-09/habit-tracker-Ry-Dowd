@@ -1,11 +1,12 @@
 import React from 'react'
+const moment = require('moment')
 
 const Comment = ({comment}) => {
   const title = comment.title ? comment.title : "Untitled Comment"
   return (
-    <li>
+    <li className="comment">
       <div>
-        {comment.poster} {comment.date}
+        {comment.poster} {moment(comment.date).calendar()}
       </div>
       <div>
         {title}

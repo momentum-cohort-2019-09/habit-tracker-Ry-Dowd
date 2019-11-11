@@ -6,26 +6,33 @@
 
 .habit {
   background:lightblue;
-  max-width: 30vw;
   margin:15px 20px;
   padding: 1rem 1rem;
-  
+  transition:.5s;
+  min-height: 10rem;
 }
-.app {
-  display:flex;
-  flex-wrap:wrap;
-}
+
 
 .button-holder {
   display:none;
 }
 
 .habit:hover{
-  transform: scale(1.2);
-  transition: transform .3s;
+  transform: scale(1.1);
+  padding:1rem 2rem;
   
 }
 
 .habit:hover .button-holder{
   display:block;
+}
+.app{
+  flex-wrap:wrap;
+}
+
+.comment{
+  background:palegoldenrod;
+  padding:.5rem 1rem;
+  margin-top:.5rem;
+  border:1px solid black;
 }
