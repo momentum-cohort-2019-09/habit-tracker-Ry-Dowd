@@ -1,5 +1,4 @@
 import React from 'react'
-import Habit from './Habit'
 import {Line} from 'react-chartjs-2'
 const moment = require('moment')
 
