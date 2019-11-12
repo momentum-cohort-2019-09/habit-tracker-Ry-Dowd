@@ -11,7 +11,7 @@ class CommentSerializer(serializers.ModelSerializer):
 class DailyLogSerializer(serializers.ModelSerializer):
   class Meta:
     model = DailyLog
-    fields = ['habit', 'actual', 'date', 'description', 'id']
+    fields = ['habit', 'actual', 'date', 'id']
     
     
 class HabitSerializer(serializers.ModelSerializer):

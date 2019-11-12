@@ -13,19 +13,11 @@
 }
 
 
-.button-holder {
-  display:none;
-}
-
 .habit:hover{
   transform: scale(1.1);
   padding:1rem 2rem;
-  
 }
 
-.habit:hover .button-holder{
-  display:block;
-}
 .app{
   flex-wrap:wrap;
 }
@@ -38,4 +30,7 @@
 }
 .canvas{
   background:white;
+}
+.chartjs-render-monitor{
+  background-color:white;
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import {Line} from 'react-chartjs-2'
+import {Bar} from 'react-chartjs-2'
 const moment = require('moment')
 
 const Chart = ({logs, goal, id}) => {
@@ -35,7 +35,7 @@ const Chart = ({logs, goal, id}) => {
     }
     return (
       <div>
-        <Line data={data} width={300} height={200} />
+        <Bar data={data} width={300} height={200}/>
       </div>
     )
   }

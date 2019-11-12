@@ -5,7 +5,6 @@ import Comment from './Comment'
 
 const CommentForm = ({habit, user}) => {
   const csrftoken= Cookies.get('csrftoken')
-  console.log(csrftoken)
   
   function postComment(){
     event.preventDefault()

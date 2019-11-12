@@ -23,7 +23,6 @@ class DailyLog(models.Model):
   habit = models.ForeignKey(to=Habit, on_delete=models.CASCADE, related_name='logs')
   actual = models.FloatField(null=True)
   date = models.DateField(default=datetime.date.today)
-  description = models.TextField(max_length=1000 ,null=True, blank=True)
   
   class Meta:
     ordering = ['date']
