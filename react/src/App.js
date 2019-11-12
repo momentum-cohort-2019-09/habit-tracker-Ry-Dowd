@@ -7,7 +7,7 @@ function App({user}) {
   return (
     <div className="app tile">
       {user.habits.map((habit, index) =>
-        <Habit habit={habit} key={'habit' + index} />
+        <Habit habit={habit} user={user} key={'habit' + index} />
       )}
       
     </div>

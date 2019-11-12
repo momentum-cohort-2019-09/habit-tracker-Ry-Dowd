@@ -26,7 +26,7 @@ class DailyLog(models.Model):
   description = models.TextField(max_length=1000 ,null=True, blank=True)
   
   class Meta:
-    ordering = ['-date']
+    ordering = ['date']
   
   def __str__(self):
     return str(self.habit) + " " + self.date.strftime('%m/%d/%y')

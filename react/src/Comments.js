@@ -1,5 +1,6 @@
 import React from 'react'
 import Comment from './Comment'
+import CommentForm from './CommentForm'
 
 const moment = require('moment')
 
@@ -41,11 +42,14 @@ class Comments extends React.Component {
       return <div>Loading...</div>
     } else {
       return(
-        <ul>
-          {comments.map((comment, index) =>
-            <Comment comment={comment} key={'comment'+index} />
-            )}
-        </ul>
+        <div className='comment-section'>
+          <ul>
+            {comments.map((comment, index) =>
+              <Comment comment={comment} key={'comment'+index} />
+              )}
+          </ul>
+          <CommentForm habit={this.props.habit} user={this.props.user} />
+        </div>
       )
     }
   }

@@ -5,13 +5,13 @@ from hobbittracker.models import User, Habit, DailyLog, Comment
 class CommentSerializer(serializers.ModelSerializer):
   class Meta:
     model = Comment
-    fields = ['poster', 'habit', 'title', 'content', 'date']
+    fields = ['poster', 'habit', 'title', 'content', 'date', 'id']
 
 
 class DailyLogSerializer(serializers.ModelSerializer):
   class Meta:
     model = DailyLog
-    fields = ['habit', 'actual', 'date', 'description']
+    fields = ['habit', 'actual', 'date', 'description', 'id']
     
     
 class HabitSerializer(serializers.ModelSerializer):
