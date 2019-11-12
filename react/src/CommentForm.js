@@ -11,7 +11,6 @@ const CommentForm = ({habit, user}) => {
     event.preventDefault()
     const form = document.getElementById("comment-form-"+habit.id)
     const formData = new FormData(form)
-    console.log(formData.get('title'))
     fetch('/api/comments/', {
       method: 'POST',
       body: JSON.stringify({title:formData.get('title'), content:formData.get('comment'), 'habit':habit.id, 'poster':user.username}),
@@ -19,12 +18,8 @@ const CommentForm = ({habit, user}) => {
     })
     .then(response => response.json())
     .then(response => { 
-      console.log(response)
-      console.log(response.status_code)
-      console.log('rendering?')
       ReactDOM.render(<Comment comment={response}/>, document.getElementById("comment-anchor-"+habit.id))
     })
-    
     form.reset()
   }
   return(

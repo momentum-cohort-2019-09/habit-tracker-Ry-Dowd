@@ -9,7 +9,7 @@ const Habit = ({ habit, user }) => {
   const className = 'comments' + habit.id
 
   function showDetails() {
-    ReactDOM.render(<Details />, document.querySelector("." + className + "-details"))
+    ReactDOM.render(<Details user={user} habit={habit}/>, document.querySelector("." + className + "-details"))
   }
 
   function hideDetails() {
