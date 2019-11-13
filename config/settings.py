@@ -128,11 +128,11 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATIC_URL = '/static/'
 
 #Other custom settings:
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 
@@ -140,7 +140,7 @@ ACCOUNT_ACTIVATON_DAYS = 7
 
 AUTH_USER_MODEL = 'hobbittracker.User'
 
-LOGIN_REDIRECT_URL = "/tracker/"
+LOGIN_REDIRECT_URL = '/'
 
 # Configure Django App for Heroku.
 import django_heroku
