@@ -13,7 +13,9 @@ class NewHabit extends React.Component{
   render(){
     return(
       <div>
-        
+        <form>
+          
+        </form>
       </div>
     )
   }
