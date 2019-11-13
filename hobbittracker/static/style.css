@@ -14,7 +14,7 @@
 
 
 .habit:hover{
-  transform: scale(1.1);
+  transform: scale(1);
   padding:1rem 2rem;
 }
 

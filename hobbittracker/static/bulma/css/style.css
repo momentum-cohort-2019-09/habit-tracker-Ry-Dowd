@@ -9630,7 +9630,7 @@ label.panel-block:hover {
     width: 25%;
   }
   .tile.is-4 {
-    flex: 1 0 1;
+    flex: 0 0 1;
     min-width: 33.33333%;
   }
   .tile.is-5 {

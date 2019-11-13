@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     
     'rest_framework',
+    'django_heroku'
     
     'hobbittracker',
     'react',
@@ -84,8 +85,11 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'habittracker',
+        'USER': 'habittracker',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
 
@@ -136,3 +140,7 @@ ACCOUNT_ACTIVATON_DAYS = 7
 AUTH_USER_MODEL = 'hobbittracker.User'
 
 LOGIN_REDIRECT_URL = "/tracker/"
+
+# Configure Django App for Heroku.
+import django_heroku
+django_heroku.settings(locals())

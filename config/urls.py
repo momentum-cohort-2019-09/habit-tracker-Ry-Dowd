@@ -28,5 +28,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('registration.backends.default.urls')),
     path('api/', include(router.urls)),
-    path('tracker/', include('react.urls'))
+    path('', include('react.urls'))
 ]
