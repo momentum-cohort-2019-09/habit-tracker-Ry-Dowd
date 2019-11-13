@@ -15,7 +15,8 @@
     "react-scripts": "3.2.0"
   },
   "scripts": {
-    "start": "npm-run-all -p django watch",
+    "start": "npm run build",
+    "dev-start": "npm-run-all -p django watch",
     "django": "./manage.py runserver",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
