@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     
     'rest_framework',
+    'django_heroku'
     
     'hobbittracker',
     'react',
@@ -132,6 +133,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 #Other custom settings:
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 
 ACCOUNT_ACTIVATON_DAYS = 7
@@ -139,3 +142,7 @@ ACCOUNT_ACTIVATON_DAYS = 7
 AUTH_USER_MODEL = 'hobbittracker.User'
 
 LOGIN_REDIRECT_URL = "/tracker/"
+
+# Configure Django App for Heroku.
+import django_heroku
+django_heroku.settings(locals())
