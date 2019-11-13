@@ -25,7 +25,7 @@ SECRET_KEY = '_j&waf22*)49nf5$o2-352*@(vb4n6vpj^nj2bw#hk#fdkd5-%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [https://habittracker-rydowd.herokuapp.com/]
 
 
 # Application definition
