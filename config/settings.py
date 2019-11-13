@@ -134,7 +134,6 @@ STATIC_URL = '/static/'
 
 #Other custom settings:
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 
 ACCOUNT_ACTIVATON_DAYS = 7
 
